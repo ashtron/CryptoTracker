@@ -7,8 +7,6 @@ $("document").ready(function() {
     "gnt": { endpoint: "https://api.coinmarketcap.com/v1/ticker/golem-network-tokens/", balance: 1073.56468201 }
   }
 
-  var totalValue = coinData["eth"]["balance"] + coinData["icn"]["balance"] + coinData["gnt"]["balance"];
-
   function getData(coin) {
     $.get(coinData[coin]["endpoint"], function(data) {
       var price = data[0]["price_usd"];
